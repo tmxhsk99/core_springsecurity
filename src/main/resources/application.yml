@@ -16,6 +16,7 @@ spring:
     url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
     driver-class-name: org.h2.Driver
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: create
     properties:
