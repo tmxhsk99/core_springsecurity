@@ -8,10 +8,6 @@ spring:
       enabled: true
     livereload:
       enabled: true
-  security:
-    user:
-      password: 1111
-      name: user
   datasource:
     url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
     driver-class-name: org.h2.Driver
