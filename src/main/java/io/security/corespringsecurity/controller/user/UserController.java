@@ -32,9 +32,11 @@ public class UserController {
 
 	@PostMapping("/users")
 	public String createUser(AccountDto accountDto) {
+
 		ModelMapper modelMapper = new ModelMapper();
 		Account account = modelMapper.map(accountDto, Account.class);
 		accountDto.setPassword(passwordEncoder.encode(account.getPassword()));
+		userService.createUser(account);
 
 		return "redirect:/";
 	}
